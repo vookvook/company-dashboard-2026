@@ -3,19 +3,18 @@
 
 body, html {
     width: 100%; height: 100%;
-    background-color: #050505; /* 아주 짙은 검정 */
-    color: white;
-    font-family: sans-serif;
-    overflow: hidden; /* 스크롤 방지 */
+    background-color: #f8fafc; /* 밝은 회색빛 화이트 */
+    color: #1e293b; /* 깊은 네이비색 글자 */
+    font-family: 'Pretendard', -apple-system, sans-serif;
+    overflow: hidden;
 }
 
-/* 4K 해상도 대응 컨테이너 */
+/* 4K 해상도 대응 (일반 모니터에서도 보이게 0.3배 축소) */
 #dashboard {
     width: 3840px; height: 2160px;
     position: relative;
     transform-origin: top left;
-    /* 일반 모니터에서도 보이도록 브라우저 크기에 맞춰 축소함 */
-    transform: scale(0.3); 
+    transform: scale(0.3); /* 내 모니터 크기에 맞춰 0.1 ~ 0.5 사이로 조절하세요 */
 }
 
 /* 페이지 공통 설정 */
@@ -23,46 +22,60 @@ body, html {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    display: none; /* 기본적으로 숨김 */
+    display: none; 
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 100px;
 }
 
-/* 활성화된 페이지만 보여줌 */
 .page.active {
     display: flex;
 }
 
-/* 1) 슬로건 디자인 */
+/* 1) 슬로건 디자인 (화이트 배경에 블루 포인트) */
 .slogan-text {
-    font-size: 200px; /* 4K라 아주 크게 */
+    font-size: 220px;
     font-weight: 900;
     text-align: center;
-    line-height: 1.2;
+    line-height: 1.1;
+    color: #0f172a;
 }
 .slogan-text span {
-    color: #3b82f6; /* 포인트 블루 */
+    color: #2563eb; /* 선명한 블루 */
+    display: block;
+    margin-top: 40px;
 }
 
-/* 2) 공지사항 디자인 (빨간색 배경으로 눈에 띄게) */
+/* 2) 공지사항 디자인 (부드러운 레드/오렌지 포인트) */
 .notice-card {
-    background: #e11d48;
-    width: 80%;
-    padding: 150px;
-    border-radius: 100px;
+    background: white;
+    width: 85%;
+    padding: 180px;
+    border-radius: 120px;
     text-align: center;
-    box-shadow: 0 50px 100px rgba(0,0,0,0.5);
+    box-shadow: 0 80px 150px rgba(0,0,0,0.08); /* 부드러운 그림자 */
+    border: 5px solid #f1f5f9;
 }
-.notice-label { font-size: 80px; font-weight: 300; margin-bottom: 50px; opacity: 0.7; }
-.notice-text { font-size: 140px; font-weight: 800; line-height: 1.4; }
+.notice-label { 
+    font-size: 80px; 
+    font-weight: 700; 
+    margin-bottom: 60px; 
+    color: #e11d48; /* 강조 레드 */
+    letter-spacing: 15px;
+}
+.notice-text { 
+    font-size: 150px; 
+    font-weight: 800; 
+    line-height: 1.4; 
+    color: #1e293b;
+}
 
-/* 타이틀 공통 */
+/* 페이지 타이틀 */
 .page-title {
-    font-size: 100px;
-    margin-bottom: 80px;
-    color: #3b82f6;
+    font-size: 120px;
+    margin-bottom: 100px;
+    color: #2563eb;
+    font-weight: 800;
     text-transform: uppercase;
-    letter-spacing: 10px;
 }
