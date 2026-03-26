@@ -2,11 +2,11 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Company Dashboard 2026</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>테스트 화면</h1>
     <div id="dashboard">
         <section class="page active" id="page-slogan">
             <div class="content">
@@ -15,18 +15,25 @@
         </section>
 
         <section class="page" id="page-org">
-            <h2 class="title">Organization Chart</h2>
+            <h2 class="page-title">Organization Chart</h2>
             <div class="org-grid" id="org-container">
+                </div>
+        </section>
+
+        <section class="page" id="page-schedule">
+            <h2 class="page-title">2026 Project Schedule</h2>
+            <div class="calendar-grid" id="calendar-container">
                 </div>
         </section>
 
         <section class="page" id="page-notice">
             <div class="notice-card">
-                <h3>NOTICE</h3>
-                <p>출/퇴근 시에 캡스 지문인식 혹은<br>카드 태그를 통하여 기록해 주세요.</p>
+                <p class="notice-label">NOTICE</p>
+                <h3 class="notice-text">출/퇴근 시에 캡스 지문인식 혹은<br>카드 태그를 통하여 기록해 주세요.</h3>
             </div>
         </section>
     </div>
-    <script src="script.js"></script>
+
+    <script src="./script.js"></script>
 </body>
 </html>
